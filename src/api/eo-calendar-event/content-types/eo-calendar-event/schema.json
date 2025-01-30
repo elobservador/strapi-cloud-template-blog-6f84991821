@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "eo_calendar_events",
+  "info": {
+    "singularName": "eo-calendar-event",
+    "pluralName": "eo-calendar-events",
+    "displayName": "EO-calendar-event"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "eventName": {
+      "type": "string"
+    },
+    "time": {
+      "type": "string"
+    },
+    "eventType": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date",
+      "required": true
+    }
+  }
+}
