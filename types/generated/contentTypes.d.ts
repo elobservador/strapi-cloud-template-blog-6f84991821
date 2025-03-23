@@ -369,6 +369,38 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiEoAcordeonEoAcordeon extends Struct.CollectionTypeSchema {
+  collectionName: 'eo_acordeons';
+  info: {
+    description: '';
+    displayName: 'EO-acordeon';
+    pluralName: 'eo-acordeons';
+    singularName: 'eo-acordeon';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    item: Schema.Attribute.Component<'acordeon.item', true>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::eo-acordeon.eo-acordeon'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    theme: Schema.Attribute.Enumeration<['EO', 'Quorum']> &
+      Schema.Attribute.DefaultTo<'EO'>;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiEoCalendarEventEoCalendarEvent
   extends Struct.CollectionTypeSchema {
   collectionName: 'eo_calendar_events';
@@ -910,6 +942,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::eo-acordeon.eo-acordeon': ApiEoAcordeonEoAcordeon;
       'api::eo-calendar-event.eo-calendar-event': ApiEoCalendarEventEoCalendarEvent;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

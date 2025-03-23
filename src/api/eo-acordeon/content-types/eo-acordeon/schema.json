@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "eo_acordeons",
+  "info": {
+    "singularName": "eo-acordeon",
+    "pluralName": "eo-acordeons",
+    "displayName": "EO-acordeon",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "item": {
+      "type": "component",
+      "repeatable": true,
+      "component": "acordeon.item"
+    },
+    "theme": {
+      "type": "enumeration",
+      "enum": [
+        "EO",
+        "Quorum"
+      ],
+      "default": "EO"
+    }
+  }
+}
