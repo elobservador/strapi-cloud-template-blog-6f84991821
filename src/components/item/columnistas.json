@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_item_columnistas",
+  "info": {
+    "displayName": "Columnistas",
+    "icon": "user",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "text"
+    },
+    "context": {
+      "type": "string"
+    },
+    "eo_perfiles_columnista": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::eo-perfiles-columnista.eo-perfiles-columnista"
+    }
+  }
+}

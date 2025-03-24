@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "eo_perfiles_columnistas",
+  "info": {
+    "singularName": "eo-perfiles-columnista",
+    "pluralName": "eo-perfiles-columnistas",
+    "displayName": "EO-perfiles-columnista"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "photo": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

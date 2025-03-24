@@ -433,6 +433,68 @@ export interface ApiEoCalendarEventEoCalendarEvent
   };
 }
 
+export interface ApiEoColumnistaEoColumnista
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'eo_columnistas';
+  info: {
+    description: '';
+    displayName: 'EO-columnista';
+    pluralName: 'eo-columnistas';
+    singularName: 'eo-columnista';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Columnistas: Schema.Attribute.Component<'item.columnistas', true>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::eo-columnista.eo-columnista'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    titulo: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiEoPerfilesColumnistaEoPerfilesColumnista
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'eo_perfiles_columnistas';
+  info: {
+    displayName: 'EO-perfiles-columnista';
+    pluralName: 'eo-perfiles-columnistas';
+    singularName: 'eo-perfiles-columnista';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::eo-perfiles-columnista.eo-perfiles-columnista'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String;
+    photo: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -944,6 +1006,8 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::eo-acordeon.eo-acordeon': ApiEoAcordeonEoAcordeon;
       'api::eo-calendar-event.eo-calendar-event': ApiEoCalendarEventEoCalendarEvent;
+      'api::eo-columnista.eo-columnista': ApiEoColumnistaEoColumnista;
+      'api::eo-perfiles-columnista.eo-perfiles-columnista': ApiEoPerfilesColumnistaEoPerfilesColumnista;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;
