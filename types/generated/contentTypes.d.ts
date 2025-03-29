@@ -457,6 +457,7 @@ export interface ApiEoColumnistaEoColumnista
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    theme: Schema.Attribute.Enumeration<['EO', 'Quorum']>;
     titulo: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

@@ -20,6 +20,13 @@
       "repeatable": true,
       "component": "item.columnistas",
       "required": false
+    },
+    "theme": {
+      "type": "enumeration",
+      "enum": [
+        "EO",
+        "Quorum"
+      ]
     }
   }
 }
