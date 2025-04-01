@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_carrusel_multimedia_videos",
+  "info": {
+    "displayName": "media",
+    "icon": "television",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "video": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "files",
+        "videos"
+      ]
+    },
+    "videoMobile": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "files",
+        "videos"
+      ]
+    }
+  }
+}

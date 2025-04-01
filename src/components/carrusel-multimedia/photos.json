@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_carrusel_multimedia_photos",
+  "info": {
+    "displayName": "photos",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "titulo": {
+      "type": "string"
+    },
+    "photo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    }
+  }
+}

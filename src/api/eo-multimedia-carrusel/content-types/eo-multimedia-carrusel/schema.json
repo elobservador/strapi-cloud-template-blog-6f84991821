@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "eo_multimedia_carrusels",
+  "info": {
+    "singularName": "eo-multimedia-carrusel",
+    "pluralName": "eo-multimedia-carrusels",
+    "displayName": "EO-multimedia-carrusel",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "media_elements": {
+      "type": "dynamiczone",
+      "components": [
+        "carrusel-multimedia.videos",
+        "carrusel-multimedia.photos"
+      ],
+      "required": true,
+      "max": 6,
+      "min": 1
+    }
+  }
+}

@@ -465,6 +465,47 @@ export interface ApiEoColumnistaEoColumnista
   };
 }
 
+export interface ApiEoMultimediaCarruselEoMultimediaCarrusel
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'eo_multimedia_carrusels';
+  info: {
+    description: '';
+    displayName: 'EO-multimedia-carrusel';
+    pluralName: 'eo-multimedia-carrusels';
+    singularName: 'eo-multimedia-carrusel';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::eo-multimedia-carrusel.eo-multimedia-carrusel'
+    > &
+      Schema.Attribute.Private;
+    media_elements: Schema.Attribute.DynamicZone<
+      ['carrusel-multimedia.videos', 'carrusel-multimedia.photos']
+    > &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 6;
+          min: 1;
+        },
+        number
+      >;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiEoPerfilesColumnistaEoPerfilesColumnista
   extends Struct.CollectionTypeSchema {
   collectionName: 'eo_perfiles_columnistas';
@@ -1008,6 +1049,7 @@ declare module '@strapi/strapi' {
       'api::eo-acordeon.eo-acordeon': ApiEoAcordeonEoAcordeon;
       'api::eo-calendar-event.eo-calendar-event': ApiEoCalendarEventEoCalendarEvent;
       'api::eo-columnista.eo-columnista': ApiEoColumnistaEoColumnista;
+      'api::eo-multimedia-carrusel.eo-multimedia-carrusel': ApiEoMultimediaCarruselEoMultimediaCarrusel;
       'api::eo-perfiles-columnista.eo-perfiles-columnista': ApiEoPerfilesColumnistaEoPerfilesColumnista;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

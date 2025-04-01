@@ -14,6 +14,33 @@ export interface AcordeonItem extends Struct.ComponentSchema {
   };
 }
 
+export interface CarruselMultimediaPhotos extends Struct.ComponentSchema {
+  collectionName: 'components_carrusel_multimedia_photos';
+  info: {
+    description: '';
+    displayName: 'photos';
+  };
+  attributes: {
+    photo: Schema.Attribute.Media<'images' | 'files'>;
+    titulo: Schema.Attribute.String;
+  };
+}
+
+export interface CarruselMultimediaVideos extends Struct.ComponentSchema {
+  collectionName: 'components_carrusel_multimedia_videos';
+  info: {
+    description: '';
+    displayName: 'media';
+    icon: 'television';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+    video: Schema.Attribute.Media<'files' | 'videos'> &
+      Schema.Attribute.Required;
+    videoMobile: Schema.Attribute.Media<'files' | 'videos'>;
+  };
+}
+
 export interface ItemColumnistas extends Struct.ComponentSchema {
   collectionName: 'components_item_columnistas';
   info: {
@@ -35,6 +62,8 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'acordeon.item': AcordeonItem;
+      'carrusel-multimedia.photos': CarruselMultimediaPhotos;
+      'carrusel-multimedia.videos': CarruselMultimediaVideos;
       'item.columnistas': ItemColumnistas;
     }
   }
