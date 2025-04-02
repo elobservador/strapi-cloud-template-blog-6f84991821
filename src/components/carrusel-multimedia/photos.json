@@ -17,6 +17,9 @@
         "images",
         "files"
       ]
+    },
+    "url": {
+      "type": "string"
     }
   }
 }

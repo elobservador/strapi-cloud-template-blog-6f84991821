@@ -23,6 +23,7 @@ export interface CarruselMultimediaPhotos extends Struct.ComponentSchema {
   attributes: {
     photo: Schema.Attribute.Media<'images' | 'files'>;
     titulo: Schema.Attribute.String;
+    url: Schema.Attribute.String;
   };
 }
 
@@ -35,6 +36,7 @@ export interface CarruselMultimediaVideos extends Struct.ComponentSchema {
   };
   attributes: {
     title: Schema.Attribute.String;
+    url: Schema.Attribute.String;
     video: Schema.Attribute.Media<'files' | 'videos'> &
       Schema.Attribute.Required;
     videoMobile: Schema.Attribute.Media<'files' | 'videos'>;

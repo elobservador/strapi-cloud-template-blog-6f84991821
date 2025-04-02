@@ -27,6 +27,9 @@
         "files",
         "videos"
       ]
+    },
+    "url": {
+      "type": "string"
     }
   }
 }
