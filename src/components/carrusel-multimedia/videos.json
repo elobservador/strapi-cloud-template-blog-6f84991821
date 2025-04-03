@@ -30,6 +30,15 @@
     },
     "url": {
       "type": "string"
+    },
+    "poster": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
     }
   }
 }

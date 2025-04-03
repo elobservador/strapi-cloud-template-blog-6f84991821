@@ -35,6 +35,8 @@ export interface CarruselMultimediaVideos extends Struct.ComponentSchema {
     icon: 'television';
   };
   attributes: {
+    poster: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
     title: Schema.Attribute.String;
     url: Schema.Attribute.String;
     video: Schema.Attribute.Media<'files' | 'videos'> &
