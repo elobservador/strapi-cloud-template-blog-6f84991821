@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "eo_photo_carrusels",
+  "info": {
+    "singularName": "eo-photo-carrusel",
+    "pluralName": "eo-photo-carrusels",
+    "displayName": "EO-photo-carrusel",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "photos": {
+      "type": "component",
+      "repeatable": true,
+      "component": "carrusel-multimedia.photos",
+      "max": 10,
+      "min": 1
+    }
+  }
+}
