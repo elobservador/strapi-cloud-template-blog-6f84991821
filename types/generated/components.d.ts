@@ -31,14 +31,13 @@ export interface CarruselMultimediaVideos extends Struct.ComponentSchema {
   collectionName: 'components_carrusel_multimedia_videos';
   info: {
     description: '';
-    displayName: 'media';
+    displayName: 'videos';
     icon: 'television';
   };
   attributes: {
     poster: Schema.Attribute.Media<'images' | 'files'> &
       Schema.Attribute.Required;
     title: Schema.Attribute.String;
-    url: Schema.Attribute.String;
     video: Schema.Attribute.Media<'files' | 'videos'> &
       Schema.Attribute.Required;
     videoMobile: Schema.Attribute.Media<'files' | 'videos'>;

@@ -470,7 +470,7 @@ export interface ApiEoMultimediaCarruselEoMultimediaCarrusel
   collectionName: 'eo_multimedia_carrusels';
   info: {
     description: '';
-    displayName: 'EO-multimedia-carrusel';
+    displayName: 'EO-video-carrusel';
     pluralName: 'eo-multimedia-carrusels';
     singularName: 'eo-multimedia-carrusel';
   };
@@ -487,22 +487,12 @@ export interface ApiEoMultimediaCarruselEoMultimediaCarrusel
       'api::eo-multimedia-carrusel.eo-multimedia-carrusel'
     > &
       Schema.Attribute.Private;
-    media_elements: Schema.Attribute.DynamicZone<
-      ['carrusel-multimedia.videos', 'carrusel-multimedia.photos']
-    > &
-      Schema.Attribute.Required &
-      Schema.Attribute.SetMinMax<
-        {
-          max: 6;
-          min: 1;
-        },
-        number
-      >;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    videos: Schema.Attribute.Component<'carrusel-multimedia.videos', true>;
   };
 }
 
@@ -531,6 +521,44 @@ export interface ApiEoPerfilesColumnistaEoPerfilesColumnista
     name: Schema.Attribute.String;
     photo: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiEoPhotoCarruselEoPhotoCarrusel
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'eo_photo_carrusels';
+  info: {
+    description: '';
+    displayName: 'EO-photo-carrusel';
+    pluralName: 'eo-photo-carrusels';
+    singularName: 'eo-photo-carrusel';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::eo-photo-carrusel.eo-photo-carrusel'
+    > &
+      Schema.Attribute.Private;
+    photos: Schema.Attribute.Component<'carrusel-multimedia.photos', true> &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 10;
+          min: 1;
+        },
+        number
+      >;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1051,6 +1079,7 @@ declare module '@strapi/strapi' {
       'api::eo-columnista.eo-columnista': ApiEoColumnistaEoColumnista;
       'api::eo-multimedia-carrusel.eo-multimedia-carrusel': ApiEoMultimediaCarruselEoMultimediaCarrusel;
       'api::eo-perfiles-columnista.eo-perfiles-columnista': ApiEoPerfilesColumnistaEoPerfilesColumnista;
+      'api::eo-photo-carrusel.eo-photo-carrusel': ApiEoPhotoCarruselEoPhotoCarrusel;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

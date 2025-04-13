@@ -4,7 +4,7 @@
   "info": {
     "singularName": "eo-multimedia-carrusel",
     "pluralName": "eo-multimedia-carrusels",
-    "displayName": "EO-multimedia-carrusel",
+    "displayName": "EO-video-carrusel",
     "description": ""
   },
   "options": {
@@ -15,15 +15,10 @@
     "title": {
       "type": "string"
     },
-    "media_elements": {
-      "type": "dynamiczone",
-      "components": [
-        "carrusel-multimedia.videos",
-        "carrusel-multimedia.photos"
-      ],
-      "required": true,
-      "max": 6,
-      "min": 1
+    "videos": {
+      "type": "component",
+      "repeatable": true,
+      "component": "carrusel-multimedia.videos"
     }
   }
 }
