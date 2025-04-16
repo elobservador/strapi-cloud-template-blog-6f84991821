@@ -20,6 +20,9 @@
     },
     "url": {
       "type": "string"
+    },
+    "epigrafe": {
+      "type": "string"
     }
   }
 }
