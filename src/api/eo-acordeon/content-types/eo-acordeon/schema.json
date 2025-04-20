@@ -18,7 +18,8 @@
     "item": {
       "type": "component",
       "repeatable": true,
-      "component": "acordeon.item"
+      "component": "acordeon.item",
+      "max": 3
     },
     "theme": {
       "type": "enumeration",

@@ -9,7 +9,11 @@ export interface AcordeonItem extends Struct.ComponentSchema {
   };
   attributes: {
     open: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
-    text: Schema.Attribute.Text;
+    text: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 366;
+      }>;
     title: Schema.Attribute.String;
   };
 }
