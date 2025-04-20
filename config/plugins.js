@@ -5,18 +5,20 @@ module.exports = () => ({
                 {
                     uid: 'api::eo-acordeon.eo-acordeon',
                     draft: {
-                        url: 'https://especiales.elobservador.com.uy/interactivo/widgets/preview/',
+                        url: 'https://especiales.elobservador.com.uy/interactivo/widgets/preview/index1.html',
                         query: {
                             type: 'eo-acordeons',
                             id: '{documentId}',
+                            build: '2',
                         },
                         copy: false,
                     },
                     published: {
-                        url: '',
+                        url: 'https://especiales.elobservador.com.uy/interactivo/widgets/preview/index1.html',
                         query: {
                             type: 'eo-acordeons',
                             id: '{documentId}',
+                            build: '2',
                         },
                         copy: false,
                     },
@@ -24,18 +26,20 @@ module.exports = () => ({
                 {
                     uid: 'api::eo-columnista.eo-columnista',
                     draft: {
-                        url: 'https://especiales.elobservador.com.uy/interactivo/widgets/preview/',
+                        url: 'https://especiales.elobservador.com.uy/interactivo/widgets/preview/index1.html',
                         query: {
                             type: 'eo-columnistas',
                             id: '{documentId}',
+                            build: '2',
                         },
                         copy: false,
                     },
                     published: {
-                        url: '',
+                        url: 'https://especiales.elobservador.com.uy/interactivo/widgets/preview/index1.html',
                         query: {
                             type: 'eo-columnistas',
                             id: '{documentId}',
+                            build: '2',
                         },
                         copy: false,
                     },
@@ -43,18 +47,20 @@ module.exports = () => ({
                 {
                     uid: 'api::eo-multimedia-carrusel.eo-multimedia-carrusel',
                     draft: {
-                        url: 'https://especiales.elobservador.com.uy/interactivo/widgets/preview/',
+                        url: 'https://especiales.elobservador.com.uy/interactivo/widgets/preview/index1.html',
                         query: {
                             type: 'eo-multimedia-carrusels',
                             id: '{documentId}',
+                            build: '2',
                         },
                         copy: false,
                     },
                     published: {
-                        url: '',
+                        url: 'https://especiales.elobservador.com.uy/interactivo/widgets/preview/index1.html',
                         query: {
                             type: 'eo-multimedia-carrusels',
                             id: '{documentId}',
+                            build: '2',
                         },
                         copy: false,
                     },
