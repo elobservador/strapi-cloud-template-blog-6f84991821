@@ -36,6 +36,9 @@
         "images",
         "files"
       ]
+    },
+    "subtitle": {
+      "type": "string"
     }
   }
 }
