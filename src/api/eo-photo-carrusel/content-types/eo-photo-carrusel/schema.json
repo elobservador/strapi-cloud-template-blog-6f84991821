@@ -21,6 +21,9 @@
       "component": "carrusel-multimedia.photos",
       "max": 10,
       "min": 1
+    },
+    "subtitulo": {
+      "type": "string"
     }
   }
 }

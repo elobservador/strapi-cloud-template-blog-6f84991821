@@ -564,6 +564,7 @@ export interface ApiEoPhotoCarruselEoPhotoCarrusel
         number
       >;
     publishedAt: Schema.Attribute.DateTime;
+    subtitulo: Schema.Attribute.String;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
