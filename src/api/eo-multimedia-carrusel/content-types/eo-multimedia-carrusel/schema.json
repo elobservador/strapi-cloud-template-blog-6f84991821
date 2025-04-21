@@ -19,6 +19,9 @@
       "type": "component",
       "repeatable": true,
       "component": "carrusel-multimedia.videos"
+    },
+    "subtitle": {
+      "type": "string"
     }
   }
 }
