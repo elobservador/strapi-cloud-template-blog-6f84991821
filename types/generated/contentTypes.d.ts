@@ -498,7 +498,15 @@ export interface ApiEoMultimediaCarruselEoMultimediaCarrusel
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    videos: Schema.Attribute.Component<'carrusel-multimedia.videos', true>;
+    videos: Schema.Attribute.Component<'carrusel-multimedia.videos', true> &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 4;
+          min: 4;
+        },
+        number
+      >;
   };
 }
 

@@ -18,7 +18,10 @@
     "videos": {
       "type": "component",
       "repeatable": true,
-      "component": "carrusel-multimedia.videos"
+      "component": "carrusel-multimedia.videos",
+      "max": 4,
+      "min": 4,
+      "required": true
     }
   }
 }
