@@ -6,7 +6,7 @@
   },
   "options": {},
   "attributes": {
-    "titulo": {
+    "title": {
       "type": "string"
     },
     "photo": {
@@ -22,6 +22,9 @@
       "type": "string"
     },
     "epigrafe": {
+      "type": "string"
+    },
+    "subtitle": {
       "type": "string"
     }
   }

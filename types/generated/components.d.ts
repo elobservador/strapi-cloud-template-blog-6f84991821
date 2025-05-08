@@ -27,7 +27,8 @@ export interface CarruselMultimediaPhotos extends Struct.ComponentSchema {
   attributes: {
     epigrafe: Schema.Attribute.String;
     photo: Schema.Attribute.Media<'images' | 'files'>;
-    titulo: Schema.Attribute.String;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
     url: Schema.Attribute.String;
   };
 }
