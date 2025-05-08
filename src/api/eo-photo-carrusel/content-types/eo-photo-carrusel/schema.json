@@ -22,7 +22,7 @@
       "max": 10,
       "min": 1
     },
-    "subtitulo": {
+    "creditos": {
       "type": "string"
     }
   }
