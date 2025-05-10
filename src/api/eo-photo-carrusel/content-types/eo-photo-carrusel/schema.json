@@ -24,6 +24,10 @@
     },
     "creditos": {
       "type": "string"
+    },
+    "fullscreen": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

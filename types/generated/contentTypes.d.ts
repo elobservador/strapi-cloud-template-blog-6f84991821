@@ -558,6 +558,7 @@ export interface ApiEoPhotoCarruselEoPhotoCarrusel
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     creditos: Schema.Attribute.String;
+    fullscreen: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
