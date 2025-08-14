@@ -5,7 +5,7 @@ module.exports = () => ({
                 {
                     uid: 'api::eo-acordeon.eo-acordeon',
                     draft: {
-                        url: 'https://especiales.elobservador.com.uy/interactivo/widgets/preview/index37.html',
+                        url: 'https://especiales.elobservador.com.uy/interactivo/widgets/preview/index38.html',
                         query: {
                             type: 'eo-acordeons',
                             id: '{documentId}'
@@ -13,7 +13,7 @@ module.exports = () => ({
                         copy: false,
                     },
                     published: {
-                        url: 'https://especiales.elobservador.com.uy/interactivo/widgets/preview/index37.html',
+                        url: 'https://especiales.elobservador.com.uy/interactivo/widgets/preview/index38.html',
                         query: {
                             type: 'eo-acordeons',
                             id: '{documentId}'
@@ -24,7 +24,7 @@ module.exports = () => ({
                 {
                     uid: 'api::eo-columnista.eo-columnista',
                     draft: {
-                        url: 'https://especiales.elobservador.com.uy/interactivo/widgets/preview/index37.html',
+                        url: 'https://especiales.elobservador.com.uy/interactivo/widgets/preview/index38.html',
                         query: {
                             type: 'eo-columnistas',
                             id: '{documentId}'
@@ -32,7 +32,7 @@ module.exports = () => ({
                         copy: false,
                     },
                     published: {
-                        url: 'https://especiales.elobservador.com.uy/interactivo/widgets/preview/index37.html',
+                        url: 'https://especiales.elobservador.com.uy/interactivo/widgets/preview/index38.html',
                         query: {
                             type: 'eo-columnistas',
                             id: '{documentId}'
@@ -43,7 +43,7 @@ module.exports = () => ({
                 {
                     uid: 'api::eo-multimedia-carrusel.eo-multimedia-carrusel',
                     draft: {
-                        url: 'https://especiales.elobservador.com.uy/interactivo/widgets/preview/index37.html',
+                        url: 'https://especiales.elobservador.com.uy/interactivo/widgets/preview/index38.html',
                         query: {
                             type: 'eo-multimedia-carrusels',
                             id: '{documentId}'
@@ -51,7 +51,7 @@ module.exports = () => ({
                         copy: false,
                     },
                     published: {
-                        url: 'https://especiales.elobservador.com.uy/interactivo/widgets/preview/index37.html',
+                        url: 'https://especiales.elobservador.com.uy/interactivo/widgets/preview/index38.html',
                         query: {
                             type: 'eo-multimedia-carrusels',
                             id: '{documentId}'
@@ -62,7 +62,7 @@ module.exports = () => ({
                 {
                     uid: 'api::eo-photo-carrusel.eo-photo-carrusel',
                     draft: {
-                        url: 'https://especiales.elobservador.com.uy/interactivo/widgets/preview/index37.html',
+                        url: 'https://especiales.elobservador.com.uy/interactivo/widgets/preview/index38.html',
                         query: {
                             type: 'eo-photo-carrusels',
                             id: '{documentId}',
@@ -71,7 +71,7 @@ module.exports = () => ({
                         copy: false,
                     },
                     published: {
-                        url: 'https://especiales.elobservador.com.uy/interactivo/widgets/preview/index37.html',
+                        url: 'https://especiales.elobservador.com.uy/interactivo/widgets/preview/index38.html',
                         query: {
                             type: 'eo-photo-carrusels',
                             id: '{documentId}',
