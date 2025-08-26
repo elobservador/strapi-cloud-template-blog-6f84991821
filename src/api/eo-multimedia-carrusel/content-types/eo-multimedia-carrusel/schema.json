@@ -20,7 +20,7 @@
       "repeatable": true,
       "component": "carrusel-multimedia.videos",
       "max": 4,
-      "min": 4,
+      "min": 1,
       "required": true
     }
   }
