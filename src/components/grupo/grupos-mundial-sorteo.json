@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_grupo_grupos_mundial_sorteos",
+  "info": {
+    "displayName": "grupos-mundial-sorteo"
+  },
+  "options": {},
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "equipo1": {
+      "type": "string"
+    },
+    "equipo2": {
+      "type": "string"
+    },
+    "equipo3": {
+      "type": "string"
+    },
+    "equipo4": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
