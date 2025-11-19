@@ -51,6 +51,20 @@ export interface CarruselMultimediaVideos extends Struct.ComponentSchema {
   };
 }
 
+export interface GrupoGruposMundialSorteo extends Struct.ComponentSchema {
+  collectionName: 'components_grupo_grupos_mundial_sorteos';
+  info: {
+    displayName: 'grupos-mundial-sorteo';
+  };
+  attributes: {
+    equipo1: Schema.Attribute.String;
+    equipo2: Schema.Attribute.String;
+    equipo3: Schema.Attribute.String;
+    equipo4: Schema.Attribute.String;
+    nombre: Schema.Attribute.String;
+  };
+}
+
 export interface ItemColumnistas extends Struct.ComponentSchema {
   collectionName: 'components_item_columnistas';
   info: {
@@ -74,6 +88,7 @@ declare module '@strapi/strapi' {
       'acordeon.item': AcordeonItem;
       'carrusel-multimedia.photos': CarruselMultimediaPhotos;
       'carrusel-multimedia.videos': CarruselMultimediaVideos;
+      'grupo.grupos-mundial-sorteo': GrupoGruposMundialSorteo;
       'item.columnistas': ItemColumnistas;
     }
   }
