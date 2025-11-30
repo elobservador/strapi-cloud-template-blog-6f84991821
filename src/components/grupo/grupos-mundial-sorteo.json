@@ -9,16 +9,24 @@
       "type": "string"
     },
     "equipo1": {
-      "type": "string"
+      "type": "component",
+      "component": "paises.pais",
+      "repeatable": false
     },
     "equipo2": {
-      "type": "string"
+      "type": "component",
+      "component": "paises.pais",
+      "repeatable": false
     },
     "equipo3": {
-      "type": "string"
+      "type": "component",
+      "component": "paises.pais",
+      "repeatable": false
     },
     "equipo4": {
-      "type": "string"
+      "type": "component",
+      "component": "paises.pais",
+      "repeatable": false
     }
   },
   "config": {}

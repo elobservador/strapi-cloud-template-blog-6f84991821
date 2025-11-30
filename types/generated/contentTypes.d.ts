@@ -642,6 +642,36 @@ export interface ApiEoPhotoCarruselEoPhotoCarrusel
   };
 }
 
+export interface ApiMundial2026DiccMundial2026Dicc
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'mundial_2026_diccs';
+  info: {
+    displayName: 'mundial-2026-dicc';
+    pluralName: 'mundial-2026-diccs';
+    singularName: 'mundial-2026-dicc';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    bandera: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::mundial-2026-dicc.mundial-2026-dicc'
+    > &
+      Schema.Attribute.Private;
+    nombre: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiMundial2026SorteoMundial2026Sorteo
   extends Struct.CollectionTypeSchema {
   collectionName: 'mundial_2026_sorteos';
@@ -1187,6 +1217,7 @@ declare module '@strapi/strapi' {
       'api::eo-multimedia-carrusel.eo-multimedia-carrusel': ApiEoMultimediaCarruselEoMultimediaCarrusel;
       'api::eo-perfiles-columnista.eo-perfiles-columnista': ApiEoPerfilesColumnistaEoPerfilesColumnista;
       'api::eo-photo-carrusel.eo-photo-carrusel': ApiEoPhotoCarruselEoPhotoCarrusel;
+      'api::mundial-2026-dicc.mundial-2026-dicc': ApiMundial2026DiccMundial2026Dicc;
       'api::mundial-2026-sorteo.mundial-2026-sorteo': ApiMundial2026SorteoMundial2026Sorteo;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

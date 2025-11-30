@@ -57,10 +57,10 @@ export interface GrupoGruposMundialSorteo extends Struct.ComponentSchema {
     displayName: 'grupos-mundial-sorteo';
   };
   attributes: {
-    equipo1: Schema.Attribute.String;
-    equipo2: Schema.Attribute.String;
-    equipo3: Schema.Attribute.String;
-    equipo4: Schema.Attribute.String;
+    equipo1: Schema.Attribute.Component<'paises.pais', false>;
+    equipo2: Schema.Attribute.Component<'paises.pais', false>;
+    equipo3: Schema.Attribute.Component<'paises.pais', false>;
+    equipo4: Schema.Attribute.Component<'paises.pais', false>;
     nombre: Schema.Attribute.String;
   };
 }
@@ -82,6 +82,19 @@ export interface ItemColumnistas extends Struct.ComponentSchema {
   };
 }
 
+export interface PaisesPais extends Struct.ComponentSchema {
+  collectionName: 'components_paises_pais';
+  info: {
+    displayName: 'pais';
+  };
+  attributes: {
+    mundial_2026_dicc: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::mundial-2026-dicc.mundial-2026-dicc'
+    >;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -90,6 +103,7 @@ declare module '@strapi/strapi' {
       'carrusel-multimedia.videos': CarruselMultimediaVideos;
       'grupo.grupos-mundial-sorteo': GrupoGruposMundialSorteo;
       'item.columnistas': ItemColumnistas;
+      'paises.pais': PaisesPais;
     }
   }
 }
