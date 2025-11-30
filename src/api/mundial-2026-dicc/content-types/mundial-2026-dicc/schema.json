@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mundial_2026_diccs",
+  "info": {
+    "singularName": "mundial-2026-dicc",
+    "pluralName": "mundial-2026-diccs",
+    "displayName": "mundial-2026-dicc"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": false
+    },
+    "bandera": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

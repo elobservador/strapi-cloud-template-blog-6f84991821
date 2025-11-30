@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_paises_pais",
+  "info": {
+    "displayName": "pais"
+  },
+  "options": {},
+  "attributes": {
+    "mundial_2026_dicc": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::mundial-2026-dicc.mundial-2026-dicc"
+    }
+  },
+  "config": {}
+}
