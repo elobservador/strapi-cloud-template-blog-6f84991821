@@ -15,6 +15,9 @@
       "type": "string",
       "required": false
     },
+    "nombre_corto": {
+      "type": "string"
+    },
     "bandera": {
       "type": "media",
       "multiple": false,

@@ -665,6 +665,7 @@ export interface ApiMundial2026DiccMundial2026Dicc
     > &
       Schema.Attribute.Private;
     nombre: Schema.Attribute.String;
+    nombre_corto: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
