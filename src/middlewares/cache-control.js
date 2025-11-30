@@ -15,8 +15,8 @@ module.exports = (config, { strapi }) => {
             return;
         }
 
-        // No cachear la API mundial-2026-sorteo
-        if (ctx.url.includes('/api/mundial-2026-sorteo')) {
+        // No cachear la API mundial-2026-dicc
+        if (ctx.url.includes('/api/mundial-2026-dicc')) {
             ctx.set('Cache-Control', 'no-cache, no-store, must-revalidate');
             ctx.set('Pragma', 'no-cache');
             ctx.set('Expires', '0');
