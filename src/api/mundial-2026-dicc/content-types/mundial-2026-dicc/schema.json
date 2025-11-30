@@ -44,6 +44,15 @@
         "K",
         "L"
       ]
+    },
+    "position_in_group": {
+      "type": "enumeration",
+      "enum": [
+        "primero",
+        "segundo",
+        "tercero",
+        "cuarto"
+      ]
     }
   }
 }
