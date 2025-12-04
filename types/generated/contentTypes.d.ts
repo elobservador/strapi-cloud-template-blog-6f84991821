@@ -659,7 +659,7 @@ export interface ApiMundial2026DiccMundial2026Dicc
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     grupo: Schema.Attribute.Enumeration<
-      ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L']
+      ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'ninguno']
     >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -670,7 +670,7 @@ export interface ApiMundial2026DiccMundial2026Dicc
     nombre: Schema.Attribute.String;
     nombre_corto: Schema.Attribute.String;
     position_in_group: Schema.Attribute.Enumeration<
-      ['primero', 'segundo', 'tercero', 'cuarto']
+      ['primero', 'segundo', 'tercero', 'cuarto', 'ninguno']
     >;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
